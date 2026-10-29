@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Informazioni sul bonus</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 16px;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f3f5f9;
+      color: #202938;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 440px;
+      background: #ffffff;
+      padding: 30px 24px;
+      border-radius: 20px;
+      box-shadow: 0 10px 35px rgba(20, 35, 60, 0.09);
+    }
+
+    .label {
+      display: inline-block;
+      background: #e8f5ed;
+      color: #17683a;
+      padding: 8px 12px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.2;
+      margin: 20px 0 12px;
+    }
+
+    .intro {
+      color: #5d6675;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .offer {
+      background: #f7f8fb;
+      border: 1px solid #e5e9f0;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 22px 0;
+    }
+
+    .offer small {
+      color: #697386;
+      font-size: 13px;
+    }
+
+    .percentage {
+      font-size: 42px;
+      font-weight: 800;
+      color: #1d6b45;
+      margin: 8px 0;
+    }
+
+    .offer p {
+      margin: 5px 0;
+      line-height: 1.5;
+    }
+
+    .deadline {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #555f70;
+    }
+
+    h2 {
+      font-size: 17px;
+      margin: 25px 0 12px;
+    }
+
+    .choice {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 1px solid #dce2eb;
+      border-radius: 12px;
+      background: #ffffff;
+      color: #253247;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .choice:hover {
+      background: #f3f7ff;
+      border-color: #7795d1;
+    }
+
+    .primary {
+      background: #176b45;
+      color: #ffffff;
+      border-color: #176b45;
+      text-align: center;
+    }
+
+    .primary:hover {
+      background: #125638;
+      color: #ffffff;
+    }
+
+    .note {
+      background: #fff8e8;
+      border-radius: 10px;
+      padding: 13px;
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #6b572d;
+    }
+
+    .contact {
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid #cde4d6;
+      border-radius: 14px;
+      background: #f0f9f3;
+      text-align: center;
+      line-height: 1.7;
+    }
+    .contact a {
+      color: #176b45;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #7a8493;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #2458a6;
+    }
+
+    @media (max-width: 360px) {
+      .card {
+        padding: 24px 18px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+
+    <span class="label">INFORMAZIONI PROMOZIONALI</span>
+
+    <h1>Scopri il bonus sul primo deposito</h1>
+
+    <p class="intro">
+      Consulta le informazioni sulla promozione e scegli
+      come desideri proseguire. Prima di aderire, verifica
+      sempre i requisiti e le condizioni ufficiali.
+    </p>
+
+    <section class="offer">
+      <small>Bonus pubblicizzato</small>
+      <div class="percentage">+50%</div>
+      <p><strong>Sul primo deposito</strong></p>
+      <p>Promozione indicata in scadenza il 31 ottobre 2026.</p>
+      <div class="deadline">
+        La disponibilità effettiva dipende dai termini
+        ufficiali e dai requisiti di partecipazione.
+      </div>
+    </section>
+
+    <h2>Come desideri proseguire?</h2>
+
+    <button class="choice" onclick="choose('bonus')">
+      Valutare il bonus
+    </button>
+
+    <button class="choice" onclick="choose('info')">
+      Ricevere maggiori informazioni
+    </button>
+
+    <button class="choice" onclick="choose('consulenza')">
+      Parlare direttamente su WhatsApp
+    </button>
+
+    <button class="choice primary" onclick="openWhatsApp()">
+      Continua su WhatsApp →
+    </button>
+
+    <div class="note">
+      <strong>Nota importante:</strong> il bonus non è garantito
+      dalla presente pagina. Importo, requisiti, eventuali
+      vincoli e possibilità di prelievo devono essere verificati
+      nelle condizioni ufficiali della promozione.
+    </div>
+
+    <section class="contact" aria-label="Contatti del promotore">
+      <strong>Il tuo referente: Alessandro Iodice</strong>
+      <div>WhatsApp: <a href="https://wa.me/393508583572" target="_blank" rel="noopener noreferrer">+39 350 858 3572</a></div>
+      <div>Per informazioni sul bonus, contattami su WhatsApp.</div>
+    </section>
+
+    <div class="footer">
+      Informazioni promozionali da verificare prima dell'adesione.<br>
+      <a href="INSERISCI_LINK_CONDIZIONI_UFFICIALI"
+         target="_blank"
+         rel="noopener noreferrer">
+        Consulta le condizioni ufficiali
+      </a>
+      <br><br>
+      Promotore: Alessandro Iodice
+    </div>
+
+  </main>
+
+  <script>
+    // Sostituisci con il tuo numero internazionale.
+    // Solo cifre: niente +, spazi o trattini.
+    const WHATSAPP_NUMBER = "393508583572";
+
+    let selectedMessage =
+      "Buongiorno, vorrei ricevere informazioni sulla promozione.";
+
+    function choose(type) {
+      const messages = {
+        bonus:
+          "Buongiorno, vorrei valutare il bonus del 50% sul primo deposito. Potete spiegarmi le condizioni ufficiali?",
+
+        info:
+          "Buongiorno, vorrei ricevere maggiori informazioni sulla promozione e sui relativi requisiti.",
+
+        consulenza:
+          "Buongiorno, vorrei parlare con voi su WhatsApp per approfondire la promozione."
+      };
+
+      selectedMessage = messages[type];
+      openWhatsApp();
+    }
+
+    function openWhatsApp() {
+      if (!/^[0-9]{8,15}$/.test(WHATSAPP_NUMBER)) {
+        alert(
+          "Prima di utilizzare WhatsApp, configura il numero nel codice HTML."
+        );
+        return;
+      }
+
+      const url =
+        "https://wa.me/" + WHATSAPP_NUMBER +
+        "?text=" + encodeURIComponent(selectedMessage);
+
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  </script>
+</body>
+</html>
